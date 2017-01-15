@@ -7,7 +7,6 @@ class Counter
 {
 		private:
 				unsigned int count;
-
 		public:
 					Counter() : count(0){
 							//default constructor
