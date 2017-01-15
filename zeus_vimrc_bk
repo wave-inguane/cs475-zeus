@@ -1,0 +1,151 @@
+
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" Wave's configurations			
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"execute pathogen#infect()
+syntax on
+filetype plugin indent on 
+
+"syntax enable
+
+let mapleader=" "
+set timeoutlen=700
+
+
+"Add spelling 
+setlocal spell spelllang=en_us
+function! FixLastSpellingError()
+	normal! mm[s1z=`m"
+endfunction
+nnoremap <leader>y :call FixLastSpellingError()<CR> 
+
+color currentcolor
+
+
+
+"set mouse=a
+"set number
+set tabpagemax=15
+
+"set nohlsearch 
+set hlsearch
+
+" set colorcolumn=80
+set tabstop=2
+set shiftwidth=4
+
+
+" Unmap the arrow keys
+no <down> <Nop>
+no <left> <Nop>
+no <right> <Nop>
+no <up> <Nop>
+
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
+
+vno <down> <Nop>
+vno <left> <Nop>
+vno <right> <Nop>
+vno <up> <Nop>
+
+"Tabs
+" 
+map <leader>l :tabnext<CR>
+map <leader>s  :tabprevious<CR>
+
+
+map<leader>f <ESC> :set nu rnu<CR> 
+map <leader>j <ESC> :set nonu nornu<CR>
+
+"back to insert mode
+imap <leader>; <ESC>
+map <leader>x  <ESC> :1,$d <ESC>i
+
+"quick pairs
+imap <leader>" ""<ESC>i
+imap <leader>( ()<ESC>i
+imap <leader>{ {}<ESC>i
+imap <leader>[ []<ESC>i
+imap <leader>< <><ESC>i
+
+" drag selected in visual mode
+	vnoremap K xkP`[V`]
+	vnoremap J xp`[V`]
+	vnoremap L >gv
+	vnoremap H <gv
+	
+
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
+" micros
+
+
+" Ack
+" Open a new tab and search for something
+
+nmap <leader>a :tab split<CR>:Ack ""<Left>
+nmap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
+
+"Automatic Indentation
+"
+filetype on
+autocmd FileType c,cs,cc,cpp,java,sql :set cindent
+"set autoindent
+
+
+
+set laststatus=2
+set showtabline=2
+"set noshowmode
+
+" No audio bells see page 389
+set visualbell
+set showmode
+set showcmd
+set cmdheight=3
+
+"set ruler
+set report=0
+set esckeys
+set confirm
+set nowarn
+set statusline=INGUANE\ \"%f\"
+set more
+set wildignore=*.o,*.class
+"set paste
+"set pastetoggle=<F12>
+"
+set encoding=utf-8
+set relativenumber
+set number
+set showmode
+set cursorline
+set showcmd
+set cmdheight=2
+set sidescroll=2
+set scrolloff=1
+set laststatus=2
+set ttyfast
+set history=200
+set viminfo='200
+
+"Abbreviations
+abbreviate main main(int argc, char** argv)
+abbreviate #i #include<
+abbreviate #d #define 
+ab pr printf(
+ab re return
+
+"Searcing
+set ignorecase
+
+"Save Marks and global variable
+set viminfo='1000,f1,r/mnt/floppy,:100,/100,%,!
+
+"Long line
+set linebreak
+
