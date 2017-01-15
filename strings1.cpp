@@ -16,6 +16,7 @@ class part
 						partnumber = pn;
 						cost = c;
 				}
+
 				void showpart()
 				{
 						cout << "\nName = " << partname;
@@ -29,7 +30,8 @@ int main(int argc, char** argv) {
 
 		part1.setpart("handle bolt", 4473, 217.55);
 		part2.setpart("start lever", 9924, 419.25);
-		cout << "\nFirst part: "; part1.showpart();
+		cout << "\nFirst part: "; 
+		part1.showpart();
 		cout << "\nSecond part: "; part2.showpart();
 		cout << endl;
 		return 0;
