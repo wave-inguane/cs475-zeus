@@ -9,11 +9,11 @@ using namespace std;
 
 void PrintError(char* msg, int status, char* fileName, int lineNumber){
 		cout << msg << ' ' << fileName << ":" << lineNumber
-				<< "- " << strerror(status) << endl;
+				<< "- " << strerror(status) << endl<< endl;
 }
 
 void* simpleThread(void* myID){
-		cout << "Thread " << (long) myID << "is running" << endl;
+		cout << "Thread  " << (long) myID << " is running" << endl<< endl;
 		return NULL; //same as pthread_exit(NULL)
 }
 
